@@ -1,0 +1,339 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----grid index----*/
+.grid-contenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 1 fr);
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+
+
+}
+
+/*-----Header-----*/
+
+header{
+    background-color: #0A102B;
+    font-family: 'Titillium Web', sans-serif;    
+    font-size: 25px;
+    position: sticky;
+    top: 0;
+}
+
+.navegacion div{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.navegacion div p{
+    margin: 15px;
+
+}
+.navegacion div ul li{
+    display: inline-block;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+.navegacion div p{
+    color: white;
+}
+header nav div ul li a{
+    text-decoration:none;
+    color:  white; 
+    transition: 1s;
+    
+}
+
+.encabezado{
+
+    grid-area: header;
+}
+
+/*-----Main-----*/
+
+.hero{
+    text-align: center;
+    background-image: url(../img/imagen-campo.jpg);
+    width: 100%;
+    height: 400px;
+    color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    font-family: 'Titillium Web', sans-serif; 
+    font-size: 30px;
+
+}
+
+.descripcion div p{
+    margin: 10px;
+}
+.descripcion1 img{
+    height:50%;
+    width: 52%;
+    }
+.descripcion1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.descripcion2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal{
+    grid-area: main;
+}
+
+.servicios{
+    display: flex;
+    flex-direction: column;
+}
+
+.servicios h1{
+    align-self: center;
+}
+
+.servicios div img{
+    height: 30%;
+    width: 40%;
+}
+.servicios div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeria h1{
+    display: flex;
+    justify-content: center;
+}
+
+.grid-galeria{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+.grid-galeria div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 11px 10px 6px 0px rgba(0,0,0,0.65);
+-webkit-box-shadow: 11px 10px 6px 0px rgba(0,0,0,0.65);
+-moz-box-shadow: 11px 10px 6px 0px rgba(0,0,0,0.65);
+}
+.img-1{
+    grid-column: span 2;
+}
+.img-4{
+    grid-column:  span 2;
+}
+.img-6{
+    grid-row:  span 2;
+}
+.mainContactos{
+    background-color: #0A102B;
+    font-family: 'Titillium Web', sans-serif; 
+}
+
+.mainContactos h1{
+    text-align: center;
+    color: white;
+
+}
+.mainContactos img{
+    width: 100%;
+    height: 500px;
+}
+.whatsApp {
+    text-align: center;
+    color: white;
+    font-family: 'Titillium Web', sans-serif; 
+    margin-top: 30px;
+
+}
+
+.whatsApp img{
+    height: 200px;
+    width: 300px;
+}
+
+.instagram{
+    text-align: center;
+    color: white;
+    font-family: 'Titillium Web', sans-serif; 
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram img {
+    width: 400px;
+    height: 300px;
+    
+}
+.facebook{
+    text-align: center;
+    color: white;
+    font-family: 'Titillium Web', sans-serif; 
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.facebook img{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.sectionQuienes1 img{
+width: 100%;
+height: 500px;
+}
+.sectionQuienes1{
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif; 
+}
+.sectionQuienes1 h2{
+    margin: 15px;
+}
+.carousel-inner div img{
+    width: 100%;
+    height: 450px;
+}
+
+
+
+/*-----Footer-----*/
+footer{
+    background: rgb(10,16,43);
+    background: linear-gradient(90deg, rgba(10,16,43,1) 70%, rgba(8,23,103,1) 80%);
+    font-family: 'Titillium Web', sans-serif;   
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    
+}
+footer div ul{
+    list-style: none;
+}
+footer div ul li{
+    text-decoration: none;
+    margin: 15px;
+    transition: 1s;
+}
+footer div ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    
+}
+.pie{
+    grid-area: footer;
+}
+
+/*------Media Query-----*/
+
+
+@media screen and (max-width:950px) {
+    .grid-galeria{
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 220px;
+    }
+    .grid-item{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .img-9{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .grid-galeria{
+        grid-template-columns: repeat(1,1fr);
+        grid-auto-rows: 220px;
+    }
+    .grid-item{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+}
+
+@media screen and (max-width:1300px){
+    header nav div{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:876px){
+    header{
+        position:unset;
+    }
+    header nav div ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width:876px){
+    .hero{
+        background-attachment:unset;
+    }
+    .descripcion1{
+
+        flex-direction: column;
+        align-items: center;
+    }
+    .descripcion2
+    {
+
+        flex-direction: column;
+        align-items: center;
+    }
+    footer{
+
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*-----Animaciones------*/
+header nav div ul li a:hover{
+    color: aquamarine;
+    
+}
+footer div ul li:hover{
+    transform: scale(1.1);
+}
