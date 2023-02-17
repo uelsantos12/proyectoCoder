@@ -1,0 +1,165 @@
+.principal{
+    grid-area: main;
+    .hero{
+        text-align: center;
+        background-image: url(../img/imagen-campo.jpg);
+        width: 100%;
+        height: 400px;
+        color: black;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment:fixed;
+        font-family: 'Titillium Web', sans-serif; 
+        font-size: 30px;
+    
+    }
+    .descripcion{
+        div{
+            p{
+                margin: 10px;
+            }
+        }
+    }
+    .descripcion1{
+        @include flex(flex,center,center);
+        flex-direction: row;
+        img{
+            height:50%;
+            width: 52%;
+            }
+    }
+    .descripcion2{      
+        @include flex(flex,center,center);
+        flex-direction: row-reverse; 
+    }
+}
+
+main{
+    .carrusel{
+        .carousel-inner{
+            div{
+                img{
+                    width: 100%;
+                    height: 450px;
+                }
+            }
+        }
+    }
+    .servicios{
+        h1{
+            align-self: center;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+                height: 30%;
+                width: 40%;
+            }
+        }
+    }
+    .sectionQuienes1{
+        text-align: center;
+        font-family: 'Titillium Web', sans-serif; 
+        img{
+            width: 100%;
+            height: 500px;
+            }
+        h2{
+            margin: 15px;
+        }
+    }
+}
+
+.galeria{
+    h1{
+        display: flex;
+        justify-content: center;
+    }
+    .grid-galeria{
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+    
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ;
+        grid-auto-rows: 250px;
+        gap: 15px;
+        div{
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                box-shadow: 11px 10px 6px 0px rgba(0,0,0,0.65);
+            -webkit-box-shadow: 11px 10px 6px 0px rgba(0,0,0,0.65);
+            -moz-box-shadow: 11px 10px 6px 0px rgba(0,0,0,0.65);
+            }
+            .img-1{
+                grid-column: span 2;
+            }
+            .img-4{
+                grid-column:  span 2;
+            }
+            .img-6{
+                grid-row:  span 2;
+            }
+        }
+    }
+}
+
+.mainContactos{
+    background-color: nth($colores, 2 );
+    font-family: 'Titillium Web', sans-serif; 
+    h1{
+        text-align: center;
+        color: nth($colores, 1 );    
+    }
+    img{
+        width: 100%;
+        height: 500px;
+    }
+    .contactos{
+        .whatsApp {
+            text-align: center;
+            color: white;
+            font-family: 'Titillium Web', sans-serif; 
+            margin-top: 30px;
+            img{
+                height: 200px;
+                width: 300px;
+            }
+        
+    }
+    .instagram{
+        @include flex(flex,center,center);
+        text-align: center;
+        color: nth($colores, 1 );
+        font-family: 'Titillium Web', sans-serif; 
+        margin-top: 30px;
+        flex-direction: column;
+        img {
+            width: 400px;
+            height: 300px;
+            
+        }
+    }
+    .facebook{
+        text-align: center;
+        color: nth($colores, 1 );
+        font-family: 'Titillium Web', sans-serif; 
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 200px;
+            height: 200px;
+            }
+        }
+    }
+}
