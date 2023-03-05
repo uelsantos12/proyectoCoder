@@ -7,7 +7,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     color: nth($colores, 1 );
-    div{
+    div{         
         ul{
             list-style: none;
             li{
@@ -21,8 +21,12 @@ footer{
                     text-decoration: none;
                     color: nth($colores, 1 );
                     margin: 10px;
+                    
                 }
             }
+        }
+        img{
+            margin: 5px;
         }
     }
 }

@@ -6,6 +6,16 @@ header{
     top: 0;
     nav{
         div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                margin: 10px;
+            }
+            img{
+                margin-left: 80px;
+                margin-top: 10px;
+            }
             ul{
                 li{
                     a{
@@ -41,10 +51,16 @@ header{
                     margin: 15px;
                     padding-left: 15px;
                     padding-right: 15px;
+                    
                     a{
                         text-decoration:none;
                         color: nth($colores, 1 ); 
                         transition: 1s;
+                        &:hover{
+
+                            color: aquamarine;
+                            
+                        }
                     }
                 }
             }
@@ -52,4 +68,29 @@ header{
         }
     }
 
+}
+.navegacion{
+    div{
+        display: flex;
+        justify-content: space-between;
+        p{
+            margin: 15px;
+            color: nth($colores, 1 );
+            
+        }
+        ul{
+            li{
+                display: inline-block;
+                margin: 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+                a{
+                    text-decoration:none;
+                    color: nth($colores, 1 ); 
+                    transition: 1s;
+                }
+            }
+        }
+
+    }
 }
